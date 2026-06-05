@@ -1,0 +1,303 @@
+/*====全局配置【文档强制：.con=1200px居中】====*/
+body {
+  font-family: "Microsoft Yahei",sans-serif;
+  background-color: #f7f2ec; /*浅咖啡底色，对标国漫浅灰底色*/
+  color:#333;
+}
+.con{
+  width:1200px;
+  margin:0 auto;
+}
+
+/*====1.Header头部导航【黑马国漫：通栏深色导航，左logo、中导航、右搜索登录】====*/
+#head{
+  width:100%;
+  background:#38261a; /*深咖啡色导航（对标国漫深色顶栏）*/
+  height:70px;
+}
+.header-wrap{
+  height:70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+/*左侧logo*/
+.nav-left .logo{
+  color:#fff;
+  font-size:24px;
+  font-weight:bold;
+}
+/*中间导航5个菜单（文档要求5个导航）*/
+.nav-mid ul{
+  display:flex;
+  gap:38px;
+}
+.nav-mid a{
+  color:#f7f2ec;
+  font-size:16px;
+  transition:color 0.25s;
+}
+.nav-mid a:hover{
+  color:#c99d69;/*咖啡浅棕高亮，对标国漫hover变色*/
+}
+/*右侧搜索+登录（国漫右侧功能区）*/
+.nav-right{
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+.nav-right input{
+  height:30px;
+  padding:0 8px;
+  border:none;
+  border-radius:3px;
+  outline:none;
+}
+.nav-right .login{
+  padding:5px 12px;
+  background:#c99d69;
+  color:#38261a;
+  border-radius:3px;
+  font-size:14px;
+}
+
+/*====2.Banner轮播区【黑马国漫原版：relative+absolute、ol#button圆点指示器，文档强制id】====*/
+.banner{
+  width:100%;
+  height:400px;
+  position:relative;
+  overflow:hidden;
+}
+.banner-img{
+  width:100%;
+  height:400px;
+}
+.banner-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+/*文档指定：ol#button圆点指示器，空心/实心切换*/
+#button{
+  position:absolute;
+  bottom:18px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:10px;
+}
+#button li{
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:#fff;
+  opacity:0.5;
+  cursor:pointer;
+}
+#button li.cur{
+  opacity:1;
+  background:#c99d69;/*选中实心圆点（文档.cur规范）*/
+}
+/*轮播悬浮文案（absolute定位，国漫banner文字样式）*/
+.banner-txt{
+  position:absolute;
+  left:8%;
+  top:32%;
+  color:#fff;
+  font-size:34px;
+  text-shadow: 0 2px 8px #222;
+}
+
+/*====3.Content主体【黑马国漫核心：栏目标题（左文字+右更多>>）、4列卡片、hover遮罩.cur（文档强制遮罩效果）】====*/
+.content{
+  padding:55px 0;
+}
+/*国漫同款栏目标题：左右布局*/
+.box-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+  padding-bottom:8px;
+  border-bottom:2px solid #c99d69;
+}
+.box-title h2{
+  font-size:22px;
+  color:#38261a;
+}
+.box-title .more{
+  color:#666;
+  font-size:14px;
+}
+.box-title .more:hover{
+  color:#c99d69;
+}
+/*4列卡片容器（国漫多列卡片布局）*/
+.card-list{
+  display:flex;
+  gap:22px;
+  margin-bottom:50px;
+}
+.coffee-card{
+  flex:1;
+  background:#fff;
+  border-radius:6px;
+  overflow:hidden;
+  position:relative;/*遮罩absolute父级*/
+  transition:all 0.3s;
+}
+.coffee-card:hover{
+  box-shadow:0 5px 15px rgba(56,38,26,0.22);
+}
+/*卡片图片容器*/
+.card-pic{
+  width:100%;
+  height: 300px;
+  overflow:hidden;
+}
+.card-pic img{
+  width:100%;
+  height:100%;
+  transition:transform 0.3s;
+}
+.coffee-card:hover .card-pic img{
+  transform:scale(1.05);/*图片轻微放大（国漫卡片动效）*/
+}
+/*文档要求：.cur遮罩层【hover出现黑色半透明遮罩】*/
+.cur{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:300px;
+  background:rgba(0,0,0,0.55);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition:opacity 0.3s;
+  font-size:15px;
+  padding:0 10px;
+  text-align:center;
+}
+.coffee-card:hover .cur{
+  opacity:1;/*鼠标悬浮显示遮罩（文档指定cur效果）*/
+}
+/*卡片文字区*/
+.card-text{
+  padding:14px;
+}
+.card-text h3{
+  font-size:17px;
+  color:#38261a;
+  margin-bottom:6px;
+}
+.card-text p{
+  font-size:13px;
+  color:#666;
+  line-height:1.6;
+  margin:0;
+}
+
+/*====4.Footer页脚【和导航同色、版权+备案+返回顶部锚点#head，文档要求】====*/
+#footer{
+  width:100%;
+  background:#38261a;
+  color:#f7f2ec;
+  padding:35px 0;
+  text-align:center;
+}
+.footer-info p{
+  margin:6px 0;
+  font-size:14px;
+}
+.back-top{
+  display:inline-block;
+  margin-top:12px;
+  padding:6px 15px;
+  background:#c99d69;
+  color:#38261a;
+  border-radius:3px;
+}
+/* ================= 登录/注册页面表单样式 ================= */
+.form-box {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+.form-container {
+  width: 450px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(56,38,26,0.1);
+}
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  color: #38261a;
+  margin-bottom: 30px;
+  position: relative;
+}
+.form-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #c99d69;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+}
+.form-item {
+  margin-bottom: 25px;
+}
+.form-item label {
+  display: block;
+  margin-bottom: 8px;
+  color: #38261a;
+  font-size: 14px;
+}
+.form-item input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+}
+.form-item input:focus {
+  border-color: #c99d69;
+}
+.form-btn {
+  width: 100%;
+  height: 45px;
+  background: #c99d69;
+  color: #38261a;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form-btn:hover {
+  background: #38261a;
+  color: #fff;
+}
+.form-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+.form-link a {
+  color: #c99d69;
+}
+.form-link a:hover {
+  color: #38261a;
+}

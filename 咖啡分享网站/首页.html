@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>醇香咖啡文化网｜咖啡品类&手冲教程</title>
+    <link rel="stylesheet" href="mm.css">
+    <link rel="stylesheet" href="zjh.css">
+</head>
+<body id="top">
+<!--header begin 头部导航开始-->
+<header id="head">
+    <div class="con header-wrap">
+        <div class="nav-left">
+            <div class="logo"><a href="首页.html">☕ 醇香咖啡文化网</a></div>
+        </div>
+        <nav class="nav-mid">
+            <ul>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="coffee-types.html">咖啡品类</a></li>
+                <li><a href="brewing-guide.html">手冲教程</a></li>
+                <li><a href="culture.html">咖啡文化</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <input type="text" placeholder="搜索咖啡豆/做法...">
+            <a href="login.html" class="login">登录/注册</a>
+        </div>
+    </div>
+</header>
+<!--header end-->
+
+<!--banner begin 轮播横幅开始（3张轮播图+ol#button）-->
+<section class="banner">
+    <div class="banner-img">
+        <img src="img/头.png" alt="精品咖啡">
+    </div>
+    <!--文档固定id：ol#button圆点指示器-->
+    <ol id="button">
+        <li class="cur"></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <div class="banner-txt">探寻全球咖啡豆 · 学习正统手冲咖啡</div>
+</section>
+<!--banner end-->
+
+<!--content begin 主体内容（两大栏目，黑马国漫标题格式）-->
+<main class="content con">
+    <!--第一板块：热门咖啡品类-->
+    <section id="type">
+        <div class="box-title">
+            <h2>热门咖啡品类｜大家都在喝</h2>
+            <a href="make-coffee.html" class="more">查看更多>></a>
+        </div>
+        <div class="card-list">
+            
+            <!--卡片1 美式咖啡 + 点击跳转-->
+            <a href="americano.html">
+                <div class="coffee-card">
+                    <div class="card-pic">
+                        <img src="img/美式.png" alt="美式咖啡">
+                    </div>
+                    <!--文档要求cur遮罩层-->
+                    <div class="cur">黑咖首选｜低酸清爽</div>
+                    <div class="card-text">
+                        <h3>美式咖啡 Americano</h3>
+                        <p>浓缩+纯净水调配，口感干净，减脂人群优选黑咖啡。</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!--卡片2 拿铁 + 点击跳转-->
+            <a href="latte.html">
+                <div class="coffee-card">
+                    <div class="card-pic">
+                        <img src="img/拿铁.png" alt="拿铁">
+                    </div>
+                    <div class="cur">奶香醇厚｜经典拉花</div>
+                    <div class="card-text">
+                        <h3>拿铁咖啡 Latte</h3>
+                        <p>高比例鲜牛奶搭配浓缩，奶味突出，入门首选咖啡。</p>
+                    </div>
+                </div>
+            </a>
+
+            <!--卡片3 卡布奇诺 + 点击跳转-->
+            <a href="cappuccino.html">
+                <div class="coffee-card">
+                    <div class="card-pic">
+                        <img src="img/卡布奇诺.png" alt="卡布奇诺">
+                    </div>
+                    <div class="cur">绵密奶泡｜意式经典</div>
+                    <div class="card-text">
+                        <h3>卡布奇诺 Cappuccino</h3>
+                        <p>咖啡、牛奶、奶泡1:1:1，香气浓郁，意大利传统饮品。</p>
+                    </div>
+                </div>
+            </a>
+
+            <!--卡片4 摩卡 + 点击跳转-->
+            <a href="mocha.html">
+                <div class="coffee-card">
+                    <div class="card-pic">
+                        <img src="img/摩卡.png" alt="摩卡">
+                    </div>
+                    <div class="cur">巧克力香甜｜甜咖代表</div>
+                    <div class="card-text">
+                        <h3>摩卡咖啡 Mocha</h3>
+                        <p>巧克力酱+咖啡+淡奶油，香甜顺滑，甜食爱好者首选。</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!--第二板块：手冲咖啡教程（第二个栏目，国漫多区块布局）-->
+    <section id="make">
+        <div class="box-title">
+            <h2>手冲咖啡教程｜在家自制咖啡</h2>
+            <a href="make-coffee.html" class="more">完整教程>></a>
+        </div>
+        <div class="card-list">
+            <!--4张教程卡片 + 点击跳转-->
+            <a href="grind.html">
+                <div class="coffee-card">
+                    <div class="card-pic"><img src="img/研磨.png" alt="磨豆"></div>
+                    <div class="cur">咖啡豆研磨粗细控制</div>
+                    <div class="card-text"><h3>咖啡豆研磨技巧</h3><p>不同萃取方式，对应不同研磨刻度，决定咖啡口感。</p></div>
+                </div>
+            </a>
+
+            <a href="bloom.html">
+                <div class="coffee-card">
+                    <div class="card-pic"><img src="img/冲泡手法.png" alt="闷蒸"></div>
+                    <div class="cur">闷蒸充分释放香气</div>
+                    <div class="card-text"><h3>闷蒸萃取手法</h3><p>30秒闷蒸，唤醒咖啡豆二氧化碳，提升出品香气。</p></div>
+                </div>
+            </a>
+
+            <a href="water.html">
+                <div class="coffee-card">
+                    <div class="card-pic"><img src="img/水温.png" alt="水温"></div>
+                    <div class="cur">水温90~93℃最佳</div>
+                    <div class="card-text"><h3>冲煮水温把控</h3><p>高温易苦涩，低温偏酸，黄金水温是手冲关键。</p></div>
+                </div>
+            </a>
+
+            <a href="tool.html">
+                <div class="coffee-card">
+                    <div class="card-pic"><img src="img/器具.png" alt="器具"></div>
+                    <div class="cur">入门手冲器具选购</div>
+                    <div class="card-text"><h3>入门器具清单</h3><p>手冲壶+滤杯+分享壶，新手百元即可配齐。</p></div>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+<!--content end-->
+
+<!--footer begin 页脚（返回顶部锚点#top，文档要求）-->
+<footer id="footer">
+    <div class="con footer-info">
+        <p>©2025 醇香咖啡文化网 版权所有 | 鲁ICP备20250619号</p>
+        <p>专注咖啡科普、全球咖啡豆介绍、家庭手冲教学</p>
+        <a href="#top" class="back-top">返回顶部</a>
+    </div>
+</footer>
+<!--footer end-->
+</body>
+</html>
